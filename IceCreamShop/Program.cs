@@ -42,7 +42,7 @@ namespace IceCreamShop
             availableCones.Sort(anotherComparer);
 
             //comparer for cones after sorting
-            Console.WriteLine("\nSorted cones: ");
+            Console.WriteLine("\nSorted cones by price: ");
             foreach (Cone item in availableCones)
             {
                 Console.WriteLine(item.Name + ": $" + item.Cost);
