@@ -14,6 +14,7 @@ namespace IceCreamShop
             // TODO: Use a Comparer class to sort the 'flavors' array alphabetically by the 'name'
             //  field.
             //flavors before sorting
+            Console.WriteLine("Unsorted flavors: ");
             foreach (Flavor item in availableFlavors)
             {
                 Console.WriteLine(item.Name);
@@ -23,12 +24,14 @@ namespace IceCreamShop
             FlavorComparer comparer = new FlavorComparer();
             availableFlavors.Sort(comparer);
             //flavors after sorting
+            Console.WriteLine("\nSorted flavors by allergen: ");
             foreach (Flavor item in availableFlavors)
             {
                 Console.WriteLine(item.Name);
             }
-            
+
             //cones before sorting
+            Console.WriteLine("\nUnsorted cones: ");
             foreach (Cone item in availableCones)
             {
                 Console.WriteLine(item.Name + ": $" + item.Cost);
@@ -39,6 +42,7 @@ namespace IceCreamShop
             availableCones.Sort(anotherComparer);
 
             //comparer for cones after sorting
+            Console.WriteLine("\nSorted cones: ");
             foreach (Cone item in availableCones)
             {
                 Console.WriteLine(item.Name + ": $" + item.Cost);
